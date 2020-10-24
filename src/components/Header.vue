@@ -1,21 +1,24 @@
 <template>
-<div class="header">
-  <b-navbar toggleable="lg" type="light">
-    <b-navbar-brand href="#" class="mt-1">
-        <img class="MainLogo" 
-        src="../assets/brandlogo.jpeg">
-    </b-navbar-brand>
+<div class="w-100">
+  <b-navbar class="mb-1" toggleable="lg" type="dark" variant="dark">
+      <b-navbar-brand href="#">
+          <img class="MainLogo" 
+          src="../assets/brandlogo.jpeg">
+          <b-navbar-brand href="#" class="pl-2">KUTU</b-navbar-brand>
+      </b-navbar-brand>
+    
 
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
-    <!-- 小さくした際歩きやすい靴・おしゃれな靴の表示がおかしい-->
+
     <b-collapse id="nav-collapse" is-nav>
-      <b-navbar-nav class="mt-1" left>
-        <span>歩きやすい靴・おしゃれな靴</span>
+      <b-navbar-nav class="mx-auto">
+        <b-nav-text class=”>歩きやすい靴・オシャレな靴</b-nav-text>
+      <!-- 小さくした際歩きやすい靴・おしゃれな靴の表示がおかしい-->
       </b-navbar-nav>
 
       <!-- Right aligned nav items -->
-      <b-navbar-nav class="ml-auto">
-        <b-nav-item href="#">マイページ</b-nav-item>
+      <b-navbar-nav right>
+        <b-nav-item >マイページ</b-nav-item>
       </b-navbar-nav>
     </b-collapse>
   </b-navbar>
@@ -33,11 +36,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.header{
-  background: #9370db;
-}
 .MainLogo {
-    height: 35px;
+    height: 40px;
 }
-
 </style>
