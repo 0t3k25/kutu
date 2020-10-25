@@ -1,6 +1,6 @@
 <template>
 <div class="w-100">
-  <b-navbar class="mb-1" toggleable="lg" type="dark" variant="dark">
+  <b-navbar toggleable="lg" type="dark" variant="dark">
       <b-navbar-brand href="#">
           <img class="MainLogo" 
           src="../assets/brandlogo.jpeg">
@@ -22,6 +22,8 @@
       </b-navbar-nav>
     </b-collapse>
   </b-navbar>
+  <nav class="period">
+  </nav>
 </div>
 </template>
 
@@ -38,5 +40,27 @@ export default {
 <style scoped>
 .MainLogo {
     height: 40px;
+}
+@-webkit-keyframes period-color {
+  0% { background-color: red; }
+  10% { background-color: yellow; }
+  20% { background-color: greenyellow; }
+  30% { background-color: skyblue; }
+  40% { background-color: blueviolet; }
+  50% { background-color: red;}
+}
+
+@keyframes period-color {
+  0% { background-color: red; }
+  20% { background-color: yellow; }
+  40% { background-color: greenyellow; }
+  60% { background-color: skyblue; }
+  80% { background-color: blueviolet; }
+  100% { background-color: red;}
+}
+.period{
+  padding: 2px;
+  animation: period-color 10s infinite;
+  -webkit-animation: period-color 10s infinite;
 }
 </style>
