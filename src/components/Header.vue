@@ -1,5 +1,5 @@
 <template>
-<div class="w-100">
+<div class="fixed-top">
   <b-navbar toggleable="lg" type="dark" variant="dark">
       <b-navbar-brand href="#">
           <img class="MainLogo" 
@@ -59,8 +59,8 @@ export default {
   100% { background-color: red;}
 }
 .period{
-  padding: 2px;
-  animation: period-color 10s infinite;
-  -webkit-animation: period-color 10s infinite;
+  padding: 1.5px;
+  animation: period-color 15s infinite;
+  -webkit-animation: period-color 15s infinite;
 }
 </style>

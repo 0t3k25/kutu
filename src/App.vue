@@ -2,7 +2,8 @@
   <div id="app">
     <Header/>
     <Menu/>
-    <MainComponent msg="Welcome to KUTU"/>
+    <Carousel/>
+    <MainComponent/>
     <Try msg="aaaaaa"/>
 
   </div>
@@ -11,6 +12,7 @@
 <script>
 import Header from './components/Header.vue'
 import Menu from './components/Menu.vue'
+import Carousel from './components/Carousel.vue'
 import MainComponent from './components/MainComponent.vue'
 import Try from './components/default.vue'
 
@@ -19,6 +21,7 @@ export default {
   components: {
     Header,
     Menu,
+    Carousel,
     MainComponent,
     Try
   }
