@@ -25,5 +25,6 @@ export default {
 <style scoped>
 .menu{
   padding:63px 0px 0px 0px;
+
 }
 </style>
