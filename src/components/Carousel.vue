@@ -1,29 +1,42 @@
 <template>
 <div>
-    <b-carousel
-      id="carousel-1"
-      v-model="slide"
-      :interval="4000"
-      controls
-      indicators
-      background="#ababab"
-      img-width="1024"
-      img-height="480"
-      style="text-shadow: 1px 1px 2px #333;"
-    >
-    <b-carousel-slide v-for="image in images" :key="image.id">
-        <template #img>
-          <img 
-            class="d-block img-fluid w-100"
-            width="1024"
-            height="480"
+  <b-carousel
+    id="carousel-1"
+    v-model="slide"
+    :interval="2000"
+  >
+    <b-carousel-slide v-for="image in images" :key="image.id" :style="image.styles">
+      <template #img>
+        <div class="container">
+          <img
+            class="tcb_main img-fluid w-100"
             :src="image.thumb"
             alt="image slot"
-          >
-        </template>
-      </b-carousel-slide>
-
+          > 
+        </div>
+      </template>
+    </b-carousel-slide>
   </b-carousel>
+  <div class="tcb_thumb">
+    <div class="container">
+      <div>
+        <b-container class="bv-example-row mb-3">
+  <b-row cols="3">
+    <b-col>Column</b-col>
+    <b-col>Column</b-col>
+    <b-col>Column</b-col>
+    <b-col>Column</b-col>
+  </b-row>
+</b-container>
+      </div>
+
+    </div>
+  </div>
+
+  <p class="mt-4">
+    Slide #: {{ slide }}<br>
+    Sliding: {{ sliding }}
+  </p>
   <p v-for="i in words" :key="i.id">{{ i.word }}</p>
 </div>
 </template>
@@ -33,9 +46,12 @@ export default {
   data() {
     return {
     images : [
-      {id: 1, thumb: 'https://picsum.photos/1024/480/?image=55'},
-      {id: 2, thumb: 'https://picsum.photos/1024/480/?image=55'},
-      {id: 3, thumb: 'https://picsum.photos/1024/480/?image=55'}
+      {id: 1, thumb: 'https://www.timberland.com.sg/wp-content/uploads/2016/10/Featureimage.jpg',
+        styles:{backgroundColor:"green"}},
+      {id: 2, thumb: 'https://picsum.photos/1024/480/?image=55',
+        styles:{backgroundColor:"yellow"}},
+      {id: 3, thumb: 'https://picsum.photos/1024/480/?image=55',
+        styles:{backgroundColor:"red"}}
     ],
     words: [
       { id: 1, word:"うんko"},
@@ -53,5 +69,8 @@ export default {
 </script>
 
 <style scoped>
+.tcb_main{
+  height: 500px;
 
+}
 </style>
