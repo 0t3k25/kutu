@@ -4,6 +4,8 @@
     id="carousel-1"
     v-model="slide"
     :interval="2000"
+    controls
+    indicators
   >
     <b-carousel-slide v-for="image in images" :key="image.id" :style="image.styles">
       <template #img>
@@ -20,14 +22,6 @@
   <div class="tcb_thumb">
     <div class="container">
       <div>
-        <b-container class="bv-example-row mb-3">
-  <b-row cols="3">
-    <b-col>Column</b-col>
-    <b-col>Column</b-col>
-    <b-col>Column</b-col>
-    <b-col>Column</b-col>
-  </b-row>
-</b-container>
       </div>
 
     </div>
@@ -47,11 +41,11 @@ export default {
     return {
     images : [
       {id: 1, thumb: 'https://www.timberland.com.sg/wp-content/uploads/2016/10/Featureimage.jpg',
-        styles:{backgroundColor:"green"}},
+        styles:{backgroundColor:"#e6e6fa"}},
       {id: 2, thumb: 'https://picsum.photos/1024/480/?image=55',
-        styles:{backgroundColor:"yellow"}},
+        styles:{backgroundColor:"#8fbc8f"}},
       {id: 3, thumb: 'https://picsum.photos/1024/480/?image=55',
-        styles:{backgroundColor:"red"}}
+        styles:{backgroundColor:"#483d8b"}}
     ],
     words: [
       { id: 1, word:"うんko"},
@@ -71,6 +65,5 @@ export default {
 <style scoped>
 .tcb_main{
   height: 500px;
-
 }
 </style>
