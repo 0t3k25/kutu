@@ -19,19 +19,11 @@
       </template>
     </b-carousel-slide>
   </b-carousel>
-  <div class="tcb_thumb">
-    <div class="container">
-      <div>
-      </div>
 
-    </div>
-  </div>
-
-  <p class="mt-4">
+  <p class="mt-4 text-center">
     Slide #: {{ slide }}<br>
     Sliding: {{ sliding }}
   </p>
-  <p v-for="i in words" :key="i.id">{{ i.word }}</p>
 </div>
 </template>
 
@@ -48,8 +40,8 @@ export default {
         styles:{backgroundColor:"#483d8b"}}
     ],
     words: [
-      { id: 1, word:"うんko"},
-      { id: 2, word:"ちんこ"}
+      { id: 1, word:"瑞樹"},
+      { id: 2, word:"一歌"}
     ],
       slide: 0,
       sliding: null
