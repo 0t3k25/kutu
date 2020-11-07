@@ -3,7 +3,7 @@
   <b-navbar toggleable="lg" type="dark" variant="dark">
       <b-navbar-brand href="#">
           <img class="MainLogo" 
-          src="../assets/brandlogo.jpeg">
+          src="#">
           <b-navbar-brand href="#" class="pl-2">KUTU</b-navbar-brand>
       </b-navbar-brand>
     
