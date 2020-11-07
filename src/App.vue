@@ -5,7 +5,6 @@
     <Carousel/>
     <MainComponent/>
     <Try msg="aaaaaa"/>
-
   </div>
 </template>
 
