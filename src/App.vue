@@ -20,7 +20,6 @@ export default {
     Menu,
     Carousel,
     MainComponent,
-    Try
   }
 }
 </script>
