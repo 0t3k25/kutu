@@ -2,7 +2,6 @@
 node_modules
 /dist
 
-
 # local env files
 .env.local
 .env.*.local
@@ -27,6 +26,8 @@ pnpm-debug.log*
 *.png
 *.jpg
 
+#try
 default.vue
+
 #enviroment parameter
 *.env

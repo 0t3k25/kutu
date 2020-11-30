@@ -3,6 +3,8 @@
     <Header/>
     <Menu/>
     <Carousel/>
+    <Sex_Tab/>
+    <RecommendItem/>
     <MainComponent/>
   </div>
 </template>
@@ -11,7 +13,10 @@
 import Header from './components/Header.vue'
 import Menu from './components/Menu.vue'
 import Carousel from './components/Carousel.vue'
+import Sex_Tab from './components/Sex_Tab.vue'
 import MainComponent from './components/MainComponent.vue'
+import RecommendItem from './components/Recommend_item'
+
 
 export default {
   name: 'App',
@@ -19,7 +24,9 @@ export default {
     Header,
     Menu,
     Carousel,
+    Sex_Tab,
     MainComponent,
+    RecommendItem
   }
 }
 </script>

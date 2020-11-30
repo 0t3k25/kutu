@@ -11,18 +11,17 @@
       <template #img>
         <div class="container">
           <img
-            class="tcb_main img-fluid w-100"
-            :src="image.thumb"
-            alt="image slot"
-          > 
+          class="tcb_main img-fluid w-100"
+          :src="image.thumb"
+          alt="image slot"
+          >
         </div>
       </template>
     </b-carousel-slide>
   </b-carousel>
 
   <p class="mt-4 text-center">
-    Slide #: {{ slide }}<br>
-    Sliding: {{ sliding }}
+    Slide #: {{ slide }}
   </p>
 </div>
 </template>
@@ -31,31 +30,34 @@
 export default {
   data() {
     return {
-    images : [
-      {id: 1, thumb: 'https://www.timberland.com.sg/wp-content/uploads/2016/10/Featureimage.jpg',
-        styles:{backgroundColor:"#e6e6fa"}},
-      {id: 2, thumb: 'https://picsum.photos/1024/480/?image=55',
-        styles:{backgroundColor:"#8fbc8f"}},
-      {id: 3, thumb: 'https://picsum.photos/1024/480/?image=55',
-        styles:{backgroundColor:"#483d8b"}}
-    ],
-    words: [
-      { id: 1, word:"瑞樹"},
-      { id: 2, word:"一歌"}
-    ],
-      slide: 0,
-      sliding: null
+    images:null,
+    slide:0
     }
   },
   name: 'Carousel',
   props: {
     msg: String
+  },
+  mounted(){
+    fetch('http://localhost:3000/topImage')
+    .then(res =>  {
+      console.log('sucess');
+      return res.json()
+    })
+    .then(res => {
+      console.log(res)
+      this.images = res
+    })
+    .catch(err => {
+      console.log(err);
+      console.log("失敗しました");
+    })
   }
 }
 </script>
 
 <style scoped>
 .tcb_main{
-  height: 500px;
+  height: 550px;
 }
 </style>

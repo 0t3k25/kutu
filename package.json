@@ -17,6 +17,7 @@
     "bootstrap-vue": "^2.18.0",
     "core-js": "^3.6.5",
     "express": "^4.17.1",
+    "pg": "^8.4.2",
     "vue": "^2.6.12"
   },
   "devDependencies": {
