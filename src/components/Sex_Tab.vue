@@ -1,54 +1,122 @@
 <template>
-<div class="container">
-  <b-tabs
-  active-nav-item-class="font-weight-bold text-uppercase text-primary"
-  active-tab-class="font-weight-bold text-success"
-  content-class="mt-3" justified
-  >
-    <b-tab title="全て">
-      <div>
-        <b-card
-        img-src="https://storage.googleapis.com/my-kutu-data/Sex_Tab/category_sp_01.svg"
-        img-alt="Image"
-        img-top
-        tag="article"
-        style="max-width: 100px;"
-        >
-        <b-card-text>
-          <p>unnko</p>
-        </b-card-text>
-        </b-card>
-      </div>
-    </b-tab>
-    <b-tab title="メンズ"><p>I'm the second tab</p></b-tab>
-    <b-tab title="レディース"><p>I'm the tab with the very, very long title</p></b-tab>
-  </b-tabs>
-
-
-</div>
+  <div class="container">
+    <b-tabs
+      active-nav-item-class="font-weight-bold text-uppercase text-primary"
+      content-class="mt-4"
+      justified
+    >
+      <b-tab title="全て">
+        <b-row>
+          <b-col class="mb-4" v-for="type in types" :key="type.id">
+            <b-card
+              overlay
+              :img-src="type.product_img_url"
+              img-alt="Type Image"
+              text-variant="black"
+            >
+              <template #footer>
+                <small>{{type.product_name}}</small>
+              </template>
+            </b-card>
+          </b-col>
+        </b-row>
+      </b-tab>
+      <b-tab title="メンズ">
+        <b-row>
+          <b-col class="mb-4" v-for="type_men in types_men" :key="type_men.id">
+            <b-card
+              overlay
+              :img-src="type_men.product_img_url"
+              img-alt="Type Image for men"
+              text-variant="black"
+            >
+              <template #footer>
+                <small>{{type_men.product_name}}</small>
+              </template>
+            </b-card>
+          </b-col>
+        </b-row>
+      </b-tab>
+      <b-tab title="レディース">
+        <b-row>
+          <b-col class="mb-4" v-for="type_women in types_women" :key="type_women.id">
+            <b-card
+              overlay
+              :img-src="type_women.product_img_url"
+              img-alt="Type Image for men"
+              text-variant="black"
+            >
+              <template #footer>
+                <small>{{type_women.product_name}}</small>
+              </template>
+            </b-card>
+          </b-col>
+        </b-row>
+      </b-tab>
+    </b-tabs>
+  </div>
 </template>
 
 <script>
-
 export default {
-  name: 'Sex_Tab',
-  data(){
-    return{
-      
-    }
+  name: "Sex_Tab",
+  data() {
+    return {
+      types: null,
+      types_men: null,
+      types_women: null
+    };
   },
   props: {
     msg: String
   },
-
-}
-
+  mounted() {
+    fetch("http://localhost:3000/kind_of_shoes")
+      .then(res => {
+        console.log("sucess");
+        return res.json();
+      })
+      .then(res => {
+        console.log(res);
+        this.types = res;
+      })
+      .catch(err => {
+        console.log(err);
+        console.log("失敗しました");
+      });
+    fetch("http://localhost:3000/kind_of_shoes/men")
+      .then(res => {
+        console.log("sucess");
+        return res.json();
+      })
+      .then(res => {
+        console.log(res);
+        this.types_men = res;
+      })
+      .catch(err => {
+        console.log(err);
+        console.log("失敗しました");
+      });
+    fetch("http://localhost:3000/kind_of_shoes/women")
+      .then(res => {
+        console.log("sucess");
+        return res.json();
+      })
+      .then(res => {
+        console.log(res);
+        this.types_women = res;
+      })
+      .catch(err => {
+        console.log(err);
+        console.log("失敗しました");
+      });
+  }
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.color{
-    color: red;
+.color {
+  color: red;
 }
-
 </style>
