@@ -1,10 +1,24 @@
 <template>
   <div>
-    <b-carousel id="carousel-1" v-model="slide" :interval="2000" controls indicators>
-      <b-carousel-slide v-for="image in images" :key="image.id" :style="image.styles">
+    <b-carousel
+      id="carousel-1"
+      v-model="slide"
+      :interval="2000"
+      controls
+      indicators
+    >
+      <b-carousel-slide
+        v-for="image in images"
+        :key="image.id"
+        :style="image.styles"
+      >
         <template #img>
           <div class="container">
-            <img class="tcb_main img-fluid w-100" :src="image.thumb" alt="image slot" />
+            <img
+              class="tcb_main img-fluid w-100"
+              :src="image.thumb"
+              alt="image slot"
+            />
           </div>
         </template>
       </b-carousel-slide>
@@ -19,28 +33,28 @@ export default {
   data() {
     return {
       images: null,
-      slide: 0
+      slide: 0,
     };
   },
   name: "Carousel",
   props: {
-    msg: String
+    msg: String,
   },
   mounted() {
     fetch("http://localhost:3000/topImage")
-      .then(res => {
+      .then((res) => {
         //console.log("sucess");
         return res.json();
       })
-      .then(res => {
+      .then((res) => {
         //console.log(res);
         this.images = res;
       })
-      .catch(err => {
+      .catch((err) => {
         console.log(err);
         console.log("失敗しました");
       });
-  }
+  },
 };
 </script>
 

@@ -3,7 +3,7 @@
     <b-navbar type="dark" variant="dark">
       <!-- Navbar items -->
       <b-navbar-nav class="w-100 nav-justified">
-        <b-nav-item href="#">カテゴリ</b-nav-item>
+        <b-nav-item href="#">きもの</b-nav-item>
         <b-nav-item href="#">ブランド</b-nav-item>
         <b-nav-item href="#">絞り込み検索</b-nav-item>
         <b-nav-item href="#">みんなの声</b-nav-item>
@@ -16,8 +16,8 @@
 export default {
   name: "Menu",
   props: {
-    msg: String
-  }
+    msg: String,
+  },
 };
 </script>
 
