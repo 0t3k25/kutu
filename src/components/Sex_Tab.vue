@@ -15,7 +15,7 @@
               text-variant="black"
             >
               <template #footer>
-                <small>{{type.product_name}}</small>
+                <small>{{ type.product_name }}</small>
               </template>
             </b-card>
           </b-col>
@@ -31,7 +31,7 @@
               text-variant="black"
             >
               <template #footer>
-                <small>{{type_men.product_name}}</small>
+                <small>{{ type_men.product_name }}</small>
               </template>
             </b-card>
           </b-col>
@@ -39,7 +39,11 @@
       </b-tab>
       <b-tab title="レディース">
         <b-row>
-          <b-col class="mb-4" v-for="type_women in types_women" :key="type_women.id">
+          <b-col
+            class="mb-4"
+            v-for="type_women in types_women"
+            :key="type_women.id"
+          >
             <b-card
               overlay
               :img-src="type_women.product_img_url"
@@ -47,7 +51,7 @@
               text-variant="black"
             >
               <template #footer>
-                <small>{{type_women.product_name}}</small>
+                <small>{{ type_women.product_name }}</small>
               </template>
             </b-card>
           </b-col>
@@ -64,53 +68,53 @@ export default {
     return {
       types: null,
       types_men: null,
-      types_women: null
+      types_women: null,
     };
   },
   props: {
-    msg: String
+    msg: String,
   },
   mounted() {
     fetch("http://localhost:3000/kind_of_shoes")
-      .then(res => {
-        console.log("sucess");
+      .then((res) => {
+        console.log("sucess1");
         return res.json();
       })
-      .then(res => {
-        console.log(res);
+      .then((res) => {
+        //console.log(res);
         this.types = res;
       })
-      .catch(err => {
+      .catch((err) => {
         console.log(err);
-        console.log("失敗しました");
+        console.log("失敗しました2");
       });
     fetch("http://localhost:3000/kind_of_shoes/men")
-      .then(res => {
-        console.log("sucess");
+      .then((res) => {
+        console.log("sucess2");
         return res.json();
       })
-      .then(res => {
-        console.log(res);
+      .then((res) => {
+        //console.log(res);
         this.types_men = res;
       })
-      .catch(err => {
+      .catch((err) => {
         console.log(err);
-        console.log("失敗しました");
+        console.log("失敗しました3");
       });
     fetch("http://localhost:3000/kind_of_shoes/women")
-      .then(res => {
-        console.log("sucess");
+      .then((res) => {
+        console.log("sucess3");
         return res.json();
       })
-      .then(res => {
-        console.log(res);
+      .then((res) => {
+        //console.log(res);
         this.types_women = res;
       })
-      .catch(err => {
+      .catch((err) => {
         console.log(err);
-        console.log("失敗しました");
+        console.log("失敗しました4");
       });
-  }
+  },
 };
 </script>
 

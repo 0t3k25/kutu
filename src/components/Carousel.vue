@@ -52,7 +52,7 @@ export default {
       })
       .catch((err) => {
         console.log(err);
-        console.log("失敗しました");
+        console.log("失敗しました1");
       });
   },
 };
