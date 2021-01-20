@@ -88,7 +88,7 @@ export default {
         console.log(err);
         console.log("失敗しました2");
       });
-    fetch("https://localhost:3000/kind_of_shoes/men")
+    fetch("http://::1:3000/kind_of_shoes/men")
       .then((res) => {
         console.log("sucess2");
         return res.json();
@@ -101,7 +101,7 @@ export default {
         console.log(err);
         console.log("失敗しました3");
       });
-    fetch("https://localhost:3000/kind_of_shoes/women")
+    fetch("https://::1:3000/kind_of_shoes/women")
       .then((res) => {
         console.log("sucess3");
         return res.json();
