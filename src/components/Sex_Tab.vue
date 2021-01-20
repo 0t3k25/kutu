@@ -75,7 +75,7 @@ export default {
     msg: String,
   },
   mounted() {
-    fetch("http://localhost:3000/kind_of_shoes")
+    fetch("https://localhost:3000/kind_of_shoes")
       .then((res) => {
         console.log("sucess1");
         return res.json();
@@ -88,7 +88,7 @@ export default {
         console.log(err);
         console.log("失敗しました2");
       });
-    fetch("http://localhost:3000/kind_of_shoes/men")
+    fetch("https://localhost:3000/kind_of_shoes/men")
       .then((res) => {
         console.log("sucess2");
         return res.json();
@@ -101,7 +101,7 @@ export default {
         console.log(err);
         console.log("失敗しました3");
       });
-    fetch("http://localhost:3000/kind_of_shoes/women")
+    fetch("https://localhost:3000/kind_of_shoes/women")
       .then((res) => {
         console.log("sucess3");
         return res.json();
