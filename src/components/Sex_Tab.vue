@@ -101,7 +101,7 @@ export default {
         console.log(err);
         console.log("失敗しました3");
       });
-    fetch("https://fashionablelife.info/kind_of_shoes/women")
+    fetch("https://fashionablelife.info/api/kind_of_shoes/women")
       .then((res) => {
         console.log("sucess3");
         return res.json();
