@@ -1,11 +1,11 @@
 <template>
   <div class="container">
-    <p>{{info}}</p>
-    <p>{{anoko}}</p>
-    <p>{{id}}</p>
-    <p>{{name}}</p>
-    <p>{{number}}</p>
-    <p>{{brand}}</p>
+    <p>{{ info }}</p>
+    <p>{{ anoko }}</p>
+    <p>{{ id }}</p>
+    <p>{{ name }}</p>
+    <p>{{ number }}</p>
+    <p>{{ brand }}</p>
     <a href="/auth/google">Google でサインイン</a>
   </div>
 </template>
@@ -20,15 +20,29 @@ export default {
       id: null,
       name: null,
       number: null,
-      brand: null
+      brand: null,
     };
   },
   props: {
-    msg: String
-  }
+    msg: String,
+  },
+  mounted() {
+    fetch("https://fashionablelife.info/api/hello")
+      .then((res) => {
+        console.log("sucess1");
+        return res.json();
+      })
+      .then((res) => {
+        //console.log(res);
+        this.info = res;
+      })
+      .catch((err) => {
+        console.log(err);
+        console.log("失敗しました2");
+      });
+  },
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-</style>
+<style scoped></style>
