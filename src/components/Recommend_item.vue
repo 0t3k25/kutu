@@ -27,7 +27,7 @@ export default {
     msg: String,
   },
   mounted() {
-    fetch("http://fashionablelife.info/api/hello")
+    fetch("https://fashionablelife.info/api/hello")
       .then((res) => {
         console.log("sucess1");
         return res.json();
