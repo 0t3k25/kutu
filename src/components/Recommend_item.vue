@@ -34,7 +34,7 @@ export default {
       })
       .then((res) => {
         //console.log(res);
-        this.info = res;
+        this.info = res[0];
       })
       .catch((err) => {
         console.log(err);
