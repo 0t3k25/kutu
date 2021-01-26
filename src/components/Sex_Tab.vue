@@ -75,7 +75,7 @@ export default {
     msg: String,
   },
   mounted() {
-    fetch("https://fashionablelife.info/kind_of_shoes")
+    fetch("https://fashionablelife.info/api/kind_of_shoes")
       .then((res) => {
         console.log("sucess1");
         return res.json();
@@ -88,7 +88,7 @@ export default {
         console.log(err);
         console.log("失敗しました2");
       });
-    fetch("https://fashionablelife.info/kind_of_shoes/men")
+    fetch("https://fashionablelife.info/api/kind_of_shoes/men")
       .then((res) => {
         console.log("sucess2");
         return res.json();
