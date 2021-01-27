@@ -37,7 +37,7 @@ export default {
     msg: String,
   },
   mounted() {
-    fetch("https://fashhionablelife.info/api/topImage")
+    fetch("https://fashionablelife.info/api/topImage")
       .then((res) => {
         //console.log("sucess");
         return res.json();
