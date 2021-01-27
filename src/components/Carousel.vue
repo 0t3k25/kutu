@@ -7,11 +7,7 @@
       controls
       indicators
     >
-      <b-carousel-slide
-        v-for="image in images"
-        :key="image.id"
-        :style="image.styles"
-      >
+      <b-carousel-slide v-for="image in images" :key="image.id">
         <template #img>
           <div class="container">
             <img
