@@ -41,7 +41,7 @@ export default {
     msg: String,
   },
   mounted() {
-    fetch("http://fashhionablelife.info/api/topImage")
+    fetch("https://fashhionablelife.info/api/topImage")
       .then((res) => {
         //console.log("sucess");
         return res.json();
