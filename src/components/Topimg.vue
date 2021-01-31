@@ -1,26 +1,11 @@
 <template>
   <div>
-    <b-carousel
-      id="carousel-1"
-      v-model="slide"
-      :interval="2000"
-      controls
-      indicators
-    >
-      <b-carousel-slide v-for="image in images" :key="image.id">
-        <template #img>
-          <div class="container">
-            <img
-              class="tcb_main img-fluid w-100"
-              :src="image.thumb"
-              alt="image slot"
-            />
-          </div>
-        </template>
-      </b-carousel-slide>
-    </b-carousel>
-
-    <p class="mt-4 text-center">Slide #: {{ slide }}</p>
+    <div class="top-content">
+      <div v-for="image in images" :key="image.id">
+        <b-img :src="image.thumb" alt="top-img" class="top-img" />
+      </div>
+      <p>あなたにとって最高の一足を</p>
+    </div>
   </div>
 </template>
 
@@ -29,7 +14,6 @@ export default {
   data() {
     return {
       images: null,
-      slide: 0,
     };
   },
   name: "Carousel",
@@ -55,7 +39,19 @@ export default {
 </script>
 
 <style scoped>
-.tcb_main {
-  height: 550px;
+.top-img {
+  width: 100%;
+  height: 725px;
+  padding-top: 65px;
+}
+.top-content {
+  position: relative; /*相対配置*/
+}
+
+.top-content p {
+  position: absolute; /*絶対配置*/
+  color: white; /*文字は白に*/
+  top: 50%;
+  left: 50%;
 }
 </style>
