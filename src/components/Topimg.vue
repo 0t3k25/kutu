@@ -16,7 +16,7 @@ export default {
       images: null,
     };
   },
-  name: "Carousel",
+  name: "Topimg",
   props: {
     msg: String,
   },
