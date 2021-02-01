@@ -4,7 +4,13 @@
       <div v-for="image in images" :key="image.id">
         <b-img :src="image.thumb" alt="top-img" class="top-img" />
       </div>
-      <p>あなたにとって最高の一足を</p>
+      <h1 class="top-text">
+        help your workout<br />
+        <b-button block pill variant="primary" class="mt-1"
+          >KUTUの定番商品</b-button
+        >
+      </h1>
+      <div class="top-item"></div>
     </div>
   </div>
 </template>
@@ -42,16 +48,34 @@ export default {
 .top-img {
   width: 100%;
   height: 725px;
-  padding-top: 65px;
+  padding: 65px 0px 0px 0px;
 }
 .top-content {
   position: relative; /*相対配置*/
 }
 
-.top-content p {
+.top-content h1 {
   position: absolute; /*絶対配置*/
-  color: white; /*文字は白に*/
-  top: 50%;
-  left: 50%;
+  color: white;
+  top: 40%;
+  left: 60%;
+  font-family: "ＭＳ 明朝";
+}
+
+h1.top-text {
+  font-size: 20px;
+}
+@media only screen and (min-width: 651px) {
+  /* 小画面用 */
+  h1.top-text {
+    font-size: 32px;
+  }
+}
+
+@media only screen and (min-width: 961px) {
+  /* 大画面用 */
+  h1.top-text {
+    font-size: 46px;
+  }
 }
 </style>
