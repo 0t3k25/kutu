@@ -8,7 +8,13 @@
         justified
       >
         <b-tab title="メンズシューズ">
-          <b-row cols="1" cols-sm="2" cols-md="2" cols-lg="3">
+          <b-row
+            class="uniformization"
+            cols="1"
+            cols-sm="2"
+            cols-md="2"
+            cols-lg="3"
+          >
             <b-col class="mb-4" v-for="type in types" :key="type.id">
               <b-card
                 overlay
@@ -24,7 +30,13 @@
           </b-row>
         </b-tab>
         <b-tab title="レディースシューズ">
-          <b-row cols="1" cols-sm="2" cols-md="3" cols-lg="3">
+          <b-row
+            class="uniformization"
+            cols="1"
+            cols-sm="2"
+            cols-md="3"
+            cols-lg="3"
+          >
             <b-col
               class="mb-4"
               v-for="type_men in types_men"
@@ -44,7 +56,13 @@
           </b-row>
         </b-tab>
         <b-tab title="アパレル">
-          <b-row cols="1" cols-sm="2" cols-md="3" cols-lg="3">
+          <b-row
+            class="uniformization"
+            cols="1"
+            cols-sm="2"
+            cols-md="3"
+            cols-lg="3"
+          >
             <b-col
               class="mb-4"
               v-for="type_women in types_women"
@@ -82,7 +100,7 @@ export default {
     msg: String,
   },
   mounted() {
-    fetch("https://fashionablelife.info/api/kind_of_shoes")
+    fetch("https://fashionablelife.info/api/kind_of_shoes/men")
       .then((res) => {
         console.log("sucess1");
         return res.json();
@@ -95,7 +113,7 @@ export default {
         console.log(err);
         console.log("失敗しました2");
       });
-    fetch("https://fashionablelife.info/api/kind_of_shoes/men")
+    fetch("https://fashionablelife.info/api/kind_of_shoes/women")
       .then((res) => {
         console.log("sucess2");
         return res.json();
@@ -108,7 +126,7 @@ export default {
         console.log(err);
         console.log("失敗しました3");
       });
-    fetch("https://fashionablelife.info/api/kind_of_shoes/women")
+    fetch("https://fashionablelife.info/api/kind_of_shoes/other")
       .then((res) => {
         console.log("sucess3");
         return res.json();
