@@ -1,63 +1,70 @@
 <template>
-  <div class="container">
-    <b-tabs
-      active-nav-item-class="font-weight-bold text-uppercase text-primary"
-      content-class="mt-4"
-      justified
-    >
-      <b-tab title="全て">
-        <b-row>
-          <b-col class="mb-4" v-for="type in types" :key="type.id">
-            <b-card
-              overlay
-              :img-src="type.product_img_url"
-              img-alt="Type Image"
-              text-variant="black"
+  <div class="container sex-tab pt-5">
+    <h1 class="text-center pt-5">あなたへのオススメ</h1>
+    <div class="pt-3">
+      <b-tabs
+        active-nav-item-class="font-weight-bold text-uppercase text-primary"
+        content-class="mt-4"
+        justified
+      >
+        <b-tab title="メンズシューズ">
+          <b-row cols="1" cols-sm="2" cols-md="2" cols-lg="3">
+            <b-col class="mb-4" v-for="type in types" :key="type.id">
+              <b-card
+                overlay
+                :img-src="type.product_img_url"
+                img-alt="Type Image"
+                text-variant="black"
+              >
+                <template #footer>
+                  <small>{{ type.product_name }}</small>
+                </template>
+              </b-card>
+            </b-col>
+          </b-row>
+        </b-tab>
+        <b-tab title="レディースシューズ">
+          <b-row cols="1" cols-sm="2" cols-md="3" cols-lg="3">
+            <b-col
+              class="mb-4"
+              v-for="type_men in types_men"
+              :key="type_men.id"
             >
-              <template #footer>
-                <small>{{ type.product_name }}</small>
-              </template>
-            </b-card>
-          </b-col>
-        </b-row>
-      </b-tab>
-      <b-tab title="メンズ">
-        <b-row>
-          <b-col class="mb-4" v-for="type_men in types_men" :key="type_men.id">
-            <b-card
-              overlay
-              :img-src="type_men.product_img_url"
-              img-alt="Type Image for men"
-              text-variant="black"
+              <b-card
+                overlay
+                :img-src="type_men.product_img_url"
+                img-alt="Type Image for men"
+                text-variant="black"
+              >
+                <template #footer>
+                  <small>{{ type_men.product_name }}</small>
+                </template>
+              </b-card>
+            </b-col>
+          </b-row>
+        </b-tab>
+        <b-tab title="アパレル">
+          <b-row cols="1" cols-sm="2" cols-md="3" cols-lg="3">
+            <b-col
+              class="mb-4"
+              v-for="type_women in types_women"
+              :key="type_women.id"
             >
-              <template #footer>
-                <small>{{ type_men.product_name }}</small>
-              </template>
-            </b-card>
-          </b-col>
-        </b-row>
-      </b-tab>
-      <b-tab title="レディース">
-        <b-row>
-          <b-col
-            class="mb-4"
-            v-for="type_women in types_women"
-            :key="type_women.id"
-          >
-            <b-card
-              overlay
-              :img-src="type_women.product_img_url"
-              img-alt="Type Image for men"
-              text-variant="black"
-            >
-              <template #footer>
-                <small>{{ type_women.product_name }}</small>
-              </template>
-            </b-card>
-          </b-col>
-        </b-row>
-      </b-tab>
-    </b-tabs>
+              <b-card
+                overlay
+                :img-src="type_women.product_img_url"
+                img-alt="Type Image for men"
+                text-variant="black"
+              >
+                <template #footer>
+                  <small>{{ type_women.product_name }}</small>
+                </template>
+              </b-card>
+            </b-col>
+          </b-row>
+        </b-tab>
+      </b-tabs>
+    </div>
   </div>
 </template>
 
@@ -122,5 +129,8 @@ export default {
 <style scoped>
 .color {
   color: red;
+}
+.sex-tab {
+  height: 10px;
 }
 </style>
