@@ -2,7 +2,6 @@
   <div id="app">
     <Header />
     <Topimg />
-    <Sex_Tab />
     <RecommendItem />
     <MainComponent />
   </div>
@@ -11,18 +10,16 @@
 <script>
 import Header from "./components/Header.vue";
 import Topimg from "./components/Topimg.vue";
-import Sex_Tab from "./components/Sex_Tab.vue";
-import MainComponent from "./components/MainComponent.vue";
 import RecommendItem from "./components/Recommend_item";
+import MainComponent from "./components/MainComponent.vue";
 
 export default {
   name: "App",
   components: {
     Header,
     Topimg,
-    Sex_Tab,
-    MainComponent,
     RecommendItem,
+    MainComponent,
   },
 };
 </script>
