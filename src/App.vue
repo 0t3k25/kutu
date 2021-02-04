@@ -1,17 +1,17 @@
 <template>
   <div id="app">
-    <Header />
-    <Topimg />
-    <RecommendItem />
-    <MainComponent />
+    <Header></Header>
+    <Topimg></Topimg>
+    <RecommendItem></RecommendItem>
+    <Category></Category>
   </div>
 </template>
 
 <script>
-import Header from "./components/Header.vue";
-import Topimg from "./components/Topimg.vue";
+import Header from "./components/Header";
+import Topimg from "./components/Topimg";
 import RecommendItem from "./components/Recommend_item";
-import MainComponent from "./components/MainComponent.vue";
+import Category from "./components/Category";
 
 export default {
   name: "App",
@@ -19,7 +19,7 @@ export default {
     Header,
     Topimg,
     RecommendItem,
-    MainComponent,
+    Category,
   },
 };
 </script>
