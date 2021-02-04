@@ -1,7 +1,7 @@
 <template>
-  <div class="container sex-tab pt-5">
+  <div class="container pt-lg-5">
     <h1 class="text-center pt-5">あなたへのオススメ</h1>
-    <div class="pt-4">
+    <div class="pt-2">
       <b-tabs
         active-nav-item-class="font-weight-bold text-uppercase text-primary"
         content-class="mt-4"
