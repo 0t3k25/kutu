@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="pb-3">
     <div class="top-content">
       <div v-for="image in images" :key="image.id">
         <b-img :src="image.thumb" alt="top-img" class="top-img" />
@@ -27,6 +27,8 @@ export default {
     msg: String,
   },
   mounted() {
+    //本番環境
+    /*
     fetch("https://fashionablelife.info/api/topImage")
       .then((res) => {
         //console.log("sucess");
@@ -39,6 +41,21 @@ export default {
       .catch((err) => {
         console.log(err);
         console.log("失敗しました1");
+      });
+      */
+    //開発環境
+    fetch("http://localhost:3000/topImage")
+      .then((res) => {
+        console.log("sucess");
+        return res.json();
+      })
+      .then((res) => {
+        //console.log(res);
+        this.images = res;
+      })
+      .catch((err) => {
+        console.log(err);
+        console.log("失敗しました");
       });
   },
 };
