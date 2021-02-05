@@ -1,9 +1,16 @@
 <template>
   <div class="fixed-top">
     <b-navbar toggleable="true" type="dark" variant="dark">
-      <b-navbar-brand href="#">
-        <b-navbar-brand href="#" class="pl-2">KUTU</b-navbar-brand>
-      </b-navbar-brand>
+      <b-navbar-brand href="#" class="pl-2">
+        <img
+          src="https://storage.googleapis.com/my-kutu-data/top_img/logo.jpg"
+          class="d-inline-block align-top"
+          alt="Kitten"
+          width="25"
+        />
+        KUTU</b-navbar-brand
+      >
+
       <b-nav-text>歩きやすい靴・オシャレな靴 </b-nav-text>
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
       <b-collapse id="nav-collapse" is-nav>
