@@ -65,7 +65,7 @@ export default {
 .top-img {
   width: 100%;
   height: 725px;
-  padding: 65px 0px 0px 0px;
+  padding: 55px 0px 0px 0px;
 }
 .top-content {
   position: relative; /*相対配置*/
