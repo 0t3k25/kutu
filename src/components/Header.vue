@@ -8,9 +8,22 @@
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
       <b-collapse id="nav-collapse" is-nav>
         <!-- Right aligned nav items -->
-        <b-navbar-nav class="ml-auto">
-          <b-nav-item>マイページ</b-nav-item>
-        </b-navbar-nav>
+        <template>
+          <div>
+            <b-button variant="outline-info" class="mb-2"
+              >マイページへ
+              <b-icon icon="key" aria-hidden="true"></b-icon>
+            </b-button>
+          </div>
+        </template>
+        <template>
+          <div>
+            <b-button variant="outline-info"
+              >カートを見る
+              <b-icon icon="cart" aria-hidden="true"></b-icon>
+            </b-button>
+          </div>
+        </template>
       </b-collapse>
     </b-navbar>
   </div>

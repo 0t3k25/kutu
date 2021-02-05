@@ -1,5 +1,5 @@
 <template>
-  <div class="container pt-lg-5">
+  <div class="container pt-5 pb-5">
     <h1 class="text-center pt-5">あなたへのオススメ</h1>
     <div class="pt-2">
       <b-tabs
@@ -16,6 +16,7 @@
               :key="type_men.id"
             >
               <b-card
+                no-body
                 class="text-center"
                 :img-src="type_men.product_img_url"
                 img-alt="Type Image for men"
@@ -44,6 +45,7 @@
               :key="type_women.id"
             >
               <b-card
+                no-body
                 class="text-center"
                 :img-src="type_women.product_img_url"
                 img-alt="Type Image for women"
@@ -68,6 +70,7 @@
           <b-row cols="1" cols-sm="2" cols-md="2" cols-lg="3">
             <b-col class="mb-4" v-for="type in types" :key="type.id">
               <b-card
+                no-body
                 class="text-center"
                 :img-src="type.product_img_url"
                 img-alt="Type Image"

@@ -4,6 +4,7 @@
     <Topimg></Topimg>
     <RecommendItem></RecommendItem>
     <Category></Category>
+    <Footer></Footer>
   </div>
 </template>
 
@@ -12,6 +13,7 @@ import Header from "./components/Header";
 import Topimg from "./components/Topimg";
 import RecommendItem from "./components/Recommend_item";
 import Category from "./components/Category";
+import Footer from "./components/Footer";
 
 export default {
   name: "App",
@@ -20,6 +22,7 @@ export default {
     Topimg,
     RecommendItem,
     Category,
+    Footer,
   },
 };
 </script>
