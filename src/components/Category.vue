@@ -40,7 +40,7 @@ export default {
   mounted() {
     //本番環境
 
-    fetch("http://fashionablelife.info/api/category")
+    fetch("https://fashionablelife.info/api/category")
       .then((res) => {
         console.log("sucess1");
         return res.json();
