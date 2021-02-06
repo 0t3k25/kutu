@@ -24,7 +24,9 @@
                 img-height="300"
               >
                 <template #footer>
-                  <small>商品を見る</small>
+                  <b-button class="stretched-link" href="#" variant="primary"
+                    >商品をみる</b-button
+                  >
                 </template>
                 <b-card-body>
                   <b-card-title>{{ type_men.product_name }}</b-card-title>
@@ -53,7 +55,9 @@
                 img-height="300"
               >
                 <template #footer>
-                  <small>商品を見る</small>
+                  <b-button class="stretched-link" href="#" variant="primary"
+                    >商品をみる</b-button
+                  >
                 </template>
                 <b-card-body>
                   <b-card-title>{{ type_women.product_name }}</b-card-title>
@@ -78,7 +82,9 @@
                 img-height="300"
               >
                 <template #footer>
-                  <small>商品を見る</small>
+                  <b-button class="stretched-link" href="#" variant="primary"
+                    >商品をみる</b-button
+                  >
                 </template>
                 <b-card-body>
                   <b-card-title>{{ type.product_name }}</b-card-title>
@@ -107,7 +113,7 @@ export default {
     msg: String,
   },
   mounted() {
-    /*本番環境
+    //本番環境
     fetch("https://fashionablelife.info/api/kind_of_shoes/men")
       .then((res) => {
         console.log("sucess2");
@@ -147,8 +153,9 @@ export default {
         console.log(err);
         console.log("失敗しました2");
       });
-      */
+
     //開発環境
+    /*
     fetch("http://localhost:3000/kind_of_shoes/men")
       .then((res) => {
         console.log("sucess2");
@@ -188,6 +195,7 @@ export default {
         console.log(err);
         console.log("失敗しました2");
       });
+      */
   },
 };
 </script>

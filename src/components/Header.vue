@@ -2,11 +2,12 @@
   <div class="fixed-top">
     <b-navbar toggleable="true" type="dark" variant="dark">
       <b-navbar-brand href="#" class="pl-2">
-        <img
+        <b-img
+          rounded="circle"
           src="https://storage.googleapis.com/my-kutu-data/top_img/logo.jpg"
           class="d-inline-block align-top"
           alt="Kitten"
-          width="25"
+          width="28"
         />
         KUTU</b-navbar-brand
       >
@@ -17,7 +18,7 @@
         <!-- Right aligned nav items -->
         <template>
           <div>
-            <b-button variant="outline-info" class="mb-2"
+            <b-button href="#" variant="outline-info" class="mb-2"
               >マイページへ
               <b-icon icon="key" aria-hidden="true"></b-icon>
             </b-button>
@@ -25,7 +26,7 @@
         </template>
         <template>
           <div>
-            <b-button variant="outline-info"
+            <b-button href="#" variant="outline-info" class="mb-2"
               >カートを見る
               <b-icon icon="cart" aria-hidden="true"></b-icon>
             </b-button>

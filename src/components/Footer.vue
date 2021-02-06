@@ -76,29 +76,6 @@ export default {
   props: {
     msg: String,
   },
-  data() {
-    return {
-      form: {
-        email: "",
-      },
-    };
-  },
-  methods: {
-    onSubmit(event) {
-      event.preventDefault();
-      alert(JSON.stringify(this.form));
-    },
-    onReset(event) {
-      event.preventDefault();
-      // Reset our form values
-      this.form.email = "";
-      // Trick to reset/clear native browser form validation state
-      this.show = false;
-      this.$nextTick(() => {
-        this.show = true;
-      });
-    },
-  },
 };
 </script>
 

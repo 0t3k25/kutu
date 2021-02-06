@@ -13,7 +13,11 @@
             img-height="300"
           >
             <b-card-body>
-              <b-card-title>{{ category.category_name }}</b-card-title>
+              <b-card-title>
+                <a class="category_name stretched-link" href="#">
+                  {{ category.category_name }}</a
+                ></b-card-title
+              >
             </b-card-body>
           </b-card>
         </b-col>
@@ -35,8 +39,8 @@ export default {
   },
   mounted() {
     //本番環境
-    /*
-        fetch("http://fashionablelife.info/api/category")
+
+    fetch("http://fashionablelife.info/api/category")
       .then((res) => {
         console.log("sucess1");
         return res.json();
@@ -49,8 +53,9 @@ export default {
         console.log(err);
         console.log("失敗しました2");
       });
-    */
+
     //開発環境
+    /*
     fetch("http://localhost:3000/category")
       .then((res) => {
         console.log("sucess1");
@@ -64,9 +69,14 @@ export default {
         console.log(err);
         console.log("失敗しました2");
       });
+      */
   },
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped></style>
+<style scoped>
+.category_name {
+  color: black;
+}
+</style>

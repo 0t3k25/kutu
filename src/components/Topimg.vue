@@ -6,7 +6,7 @@
       </div>
       <h1 class="top-text">
         help your workout<br />
-        <b-button block pill variant="primary" class="mt-1"
+        <b-button href="#" block pill variant="primary" class="mt-1"
           >KUTUの定番商品</b-button
         >
       </h1>
@@ -28,7 +28,6 @@ export default {
   },
   mounted() {
     //本番環境
-    /*
     fetch("https://fashionablelife.info/api/topImage")
       .then((res) => {
         //console.log("sucess");
@@ -42,8 +41,8 @@ export default {
         console.log(err);
         console.log("失敗しました1");
       });
-      */
     //開発環境
+    /*
     fetch("http://localhost:3000/topImage")
       .then((res) => {
         console.log("sucess");
@@ -57,6 +56,7 @@ export default {
         console.log(err);
         console.log("失敗しました");
       });
+      */
   },
 };
 </script>
