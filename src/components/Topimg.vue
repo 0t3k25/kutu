@@ -1,14 +1,14 @@
 <template>
   <div class="pb-3">
     <div class="top-content">
-      <div v-for="image in images" :key="image.id">
+      <div v-for="(image, index) in images" :key="index">
         <b-img :src="image.thumb" alt="top-img" class="top-img" />
       </div>
       <h1 class="top-text">
-        help your workout<br />
-        <b-button href="#" block pill variant="primary" class="mt-1"
-          >KUTUの定番商品</b-button
-        >
+        {{ top_text }}<br />
+        <b-button href="#" block pill variant="primary" class="mt-1">{{
+          standard_pro
+        }}</b-button>
       </h1>
       <div class="top-item"></div>
     </div>
@@ -19,44 +19,19 @@
 export default {
   data() {
     return {
-      images: null,
+      images: [
+        {
+          thumb:
+            "https://storage.googleapis.com/my-kutu-data/top_img/topimg.jpg",
+        },
+      ],
+      top_text: "help your workout",
+      standard_pro: "KUTUの定番商品",
     };
   },
   name: "Topimg",
   props: {
     msg: String,
-  },
-  mounted() {
-    //本番環境
-    fetch("https://fashionablelife.info/api/topImage")
-      .then((res) => {
-        //console.log("sucess");
-        return res.json();
-      })
-      .then((res) => {
-        //console.log(res);
-        this.images = res;
-      })
-      .catch((err) => {
-        console.log(err);
-        console.log("失敗しました1");
-      });
-    //開発環境
-    /*
-    fetch("http://localhost:3000/topImage")
-      .then((res) => {
-        console.log("sucess");
-        return res.json();
-      })
-      .then((res) => {
-        //console.log(res);
-        this.images = res;
-      })
-      .catch((err) => {
-        console.log(err);
-        console.log("失敗しました");
-      });
-      */
   },
 };
 </script>
@@ -65,7 +40,6 @@ export default {
 .top-img {
   width: 100%;
   height: 725px;
-  padding: 55px 0px 0px 0px;
 }
 .top-content {
   position: relative; /*相対配置*/

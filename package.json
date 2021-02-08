@@ -1,6 +1,8 @@
 {
   "name": "kutu",
-  "config": {"port":80},
+  "config": {
+    "port": 80
+  },
   "version": "0.1.0",
   "engines": {
     "node": "12.x"
@@ -18,7 +20,8 @@
     "core-js": "^3.6.5",
     "express": "^4.17.1",
     "pg": "^8.4.2",
-    "vue": "^2.6.12"
+    "vue": "^2.6.12",
+    "vue-router": "^3.5.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",

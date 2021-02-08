@@ -1,6 +1,6 @@
 <template>
   <div class="container pt-5 pb-5">
-    <h1 class="text-center pt-5">あなたへのオススメ</h1>
+    <h1 class="text-center pt-5">{{ recommned }}</h1>
     <div class="pt-2">
       <b-tabs
         active-nav-item-class="font-weight-bold text-uppercase text-primary"
@@ -24,9 +24,9 @@
                 img-height="300"
               >
                 <template #footer>
-                  <b-button class="stretched-link" href="#" variant="primary"
-                    >商品をみる</b-button
-                  >
+                  <b-button class="stretched-link" href="#" variant="primary">{{
+                    show
+                  }}</b-button>
                 </template>
                 <b-card-body>
                   <b-card-title>{{ type_men.product_name }}</b-card-title>
@@ -55,9 +55,9 @@
                 img-height="300"
               >
                 <template #footer>
-                  <b-button class="stretched-link" href="#" variant="primary"
-                    >商品をみる</b-button
-                  >
+                  <b-button class="stretched-link" href="#" variant="primary">{{
+                    show
+                  }}</b-button>
                 </template>
                 <b-card-body>
                   <b-card-title>{{ type_women.product_name }}</b-card-title>
@@ -82,8 +82,8 @@
                 img-height="300"
               >
                 <template #footer>
-                  <b-button class="stretched-link" href="#" variant="primary"
-                    >商品をみる</b-button
+                  <b-button class="stretched-link" href="#" variant="primary">
+                    {{ show }}</b-button
                   >
                 </template>
                 <b-card-body>
@@ -104,6 +104,8 @@ export default {
   name: "Sex_Tab",
   data() {
     return {
+      show: "商品を見る",
+      recommned: "あなたへのオススメ",
       types: null,
       types_men: null,
       types_women: null,
