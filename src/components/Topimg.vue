@@ -4,13 +4,15 @@
       <div v-for="(image, index) in images" :key="index">
         <b-img :src="image.thumb" alt="top-img" class="top-img" />
       </div>
+
       <h1 class="top-text">
         {{ top_text }}<br />
-        <b-button href="#" block pill variant="primary" class="mt-1">{{
-          standard_pro
-        }}</b-button>
+        <router-link to="/standard">
+          <b-button block pill variant="primary" class="mt-1">
+            {{ standard_pro }}</b-button
+          ></router-link
+        >
       </h1>
-      <div class="top-item"></div>
     </div>
   </div>
 </template>
