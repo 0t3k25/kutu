@@ -3,8 +3,6 @@
     <Topimg></Topimg>
     <RecommendItem></RecommendItem>
     <Category></Category>
-    <Footer></Footer>
-    <router-view />
   </div>
 </template>
 
@@ -12,7 +10,6 @@
 import Topimg from "../components/Topimg";
 import RecommendItem from "../components/Recommend_item";
 import Category from "../components/Category";
-import Footer from "../components/Footer";
 
 export default {
   name: "Top",
@@ -20,7 +17,6 @@ export default {
     Topimg,
     RecommendItem,
     Category,
-    Footer,
   },
 };
 </script>
