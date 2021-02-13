@@ -3,7 +3,7 @@ import VueRouter from "vue-router";
 import Top from "../views/Top.vue";
 import Standard from "../views/Standard.vue";
 import Product_men from "../views/Product_men.vue";
-import product_page from "../views/Product_page.vue";
+import product from "../views/Product.vue";
 Vue.use(VueRouter);
 
 const router = new VueRouter({
@@ -13,7 +13,7 @@ const router = new VueRouter({
     { path: "/product_men", name: "product_men", component: Product_men },
     {
       path: "/product/:num",
-      component: product_page,
+      component: product,
       props: (route) => ({ num: Number(route.params.num) }),
     },
   ],
