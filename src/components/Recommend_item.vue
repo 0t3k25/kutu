@@ -194,75 +194,7 @@ export default {
   },
   mounted() {
     //本番環境
-    fetch("https://fashionablelife.info/api/kind_of_shoes/women")
-      .then((res) => {
-        console.log("sucess3");
-        return res.json();
-      })
-      .then((res) => {
-        //console.log(res);
-        this.types_women = res;
-      })
-      .catch((err) => {
-        console.log(err);
-        console.log("失敗しました4");
-      });
-    fetch("https://fashionablelife.info/api/kind_of_shoes/other")
-      .then((res) => {
-        console.log("sucess1");
-        return res.json();
-      })
-      .then((res) => {
-        //console.log(res);
-        this.types = res;
-      })
-      .catch((err) => {
-        console.log(err);
-        console.log("失敗しました2");
-      });
-
     //開発環境
-    /*
-    fetch("http://localhost:3000/kind_of_shoes/men")
-      .then((res) => {
-        console.log("sucess2");
-        return res.json();
-      })
-      .then((res) => {
-        //console.log(res);
-        this.types_men = res;
-      })
-      .catch((err) => {
-        console.log(err);
-        console.log("失敗しました3");
-      });
-    fetch("http://localhost:3000/kind_of_shoes/women")
-      .then((res) => {
-        console.log("sucess3");
-        return res.json();
-      })
-      .then((res) => {
-        //console.log(res);
-        this.types_women = res;
-      })
-      .catch((err) => {
-        console.log(err);
-        console.log("失敗しました4");
-      });
-    fetch("http://localhost:3000/kind_of_shoes/other")
-      .then((res) => {
-        console.log("sucess1");
-        return res.json();
-      })
-      .then((res) => {
-        //console.log(res);
-        this.types = res;
-      })
-      .catch((err) => {
-        console.log(err);
-        console.log("失敗しました2");
-      });
-      */
   },
 };
 </script>

@@ -104,20 +104,8 @@ export default {
 
   mounted() {
     //本番環境
-    fetch("https://fashionablelife.info/api/category/Men")
-      .then((res) => {
-        console.log("sucess2");
-        return res.json();
-      })
-      .then((res) => {
-        //console.log(res);
-        this.type = res[this.num - 1];
-      })
-      .catch((err) => {
-        console.log(err);
-        console.log("失敗しました3");
-      });
-    fetch(`http://localhost:3000/shoes/${this.num}`)
+
+    fetch(`https://fashionablelife.info/api//shoes/${this.num}`)
       .then((res) => {
         console.log("sucess2");
         return res.json();

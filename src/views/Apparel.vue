@@ -62,21 +62,7 @@ export default {
   },
   mounted() {
     //本番環境
-    fetch("https://fashionablelife.info/api/category/men")
-      .then((res) => {
-        console.log("sucess2");
-        return res.json();
-      })
-      .then((res) => {
-        //console.log(res);
-        this.types = res;
-      })
-      .catch((err) => {
-        console.log(err);
-        console.log("失敗しました3");
-      });
-
-    fetch("http://localhost:3000/shoes/categories/apparel")
+    fetch("https://fashionablelife.info/api/shoes/categories/apparel")
       .then((res) => {
         console.log("sucess2");
         return res.json();
