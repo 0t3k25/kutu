@@ -12,27 +12,25 @@
           <b-row cols="1" cols-sm="2" cols-md="3" cols-lg="3">
             <b-col
               class="mb-4"
-              v-for="type_men in types_men"
-              :key="type_men.id"
+              v-for="(rec_men, index) in rec_mens"
+              :key="index"
             >
               <b-card
                 no-body
                 class="text-center"
-                :img-src="type_men.product_img_url"
+                :img-src="rec_men.images[0].url"
                 img-alt="Type Image for men"
                 text-variant="black"
                 img-height="300"
               >
                 <template #footer>
-                  <b-button class="stretched-link" href="#" variant="primary">{{
-                    show
-                  }}</b-button>
+                  <router-link class="stretched-link" :to="rec_men.path">
+                    <b-button variant="primary"> {{ show }}</b-button>
+                  </router-link>
                 </template>
                 <b-card-body>
-                  <b-card-title>{{ type_men.product_name }}</b-card-title>
-                  <b-card-sub-title>{{
-                    type_men.product_info
-                  }}</b-card-sub-title>
+                  <b-card-title>{{ rec_men.name }}</b-card-title>
+                  <b-card-sub-title>{{ rec_men.category }}</b-card-sub-title>
                 </b-card-body>
               </b-card>
             </b-col>
@@ -43,27 +41,25 @@
           <b-row cols="1" cols-sm="2" cols-md="3" cols-lg="3">
             <b-col
               class="mb-4"
-              v-for="type_women in types_women"
-              :key="type_women.id"
+              v-for="(rec_women, index) in rec_womens"
+              :key="index"
             >
               <b-card
                 no-body
                 class="text-center"
-                :img-src="type_women.product_img_url"
-                img-alt="Type Image for women"
+                :img-src="rec_women.images[0].url"
+                img-alt="Type Image for men"
                 text-variant="black"
                 img-height="300"
               >
                 <template #footer>
-                  <b-button class="stretched-link" href="#" variant="primary">{{
-                    show
-                  }}</b-button>
+                  <router-link class="stretched-link" :to="rec_women.path">
+                    <b-button variant="primary"> {{ show }}</b-button>
+                  </router-link>
                 </template>
                 <b-card-body>
-                  <b-card-title>{{ type_women.product_name }}</b-card-title>
-                  <b-card-sub-title>{{
-                    type_women.product_info
-                  }}</b-card-sub-title>
+                  <b-card-title>{{ rec_women.name }}</b-card-title>
+                  <b-card-sub-title>{{ rec_women.category }}</b-card-sub-title>
                 </b-card-body>
               </b-card>
             </b-col>
@@ -72,23 +68,29 @@
         <!-- アパレル -->
         <b-tab title="アパレル">
           <b-row cols="1" cols-sm="2" cols-md="2" cols-lg="3">
-            <b-col class="mb-4" v-for="type in types" :key="type.id">
+            <b-col
+              class="mb-4"
+              v-for="(rec_apparel, index) in rec_apparels"
+              :key="index"
+            >
               <b-card
                 no-body
                 class="text-center"
-                :img-src="type.product_img_url"
-                img-alt="Type Image"
+                :img-src="rec_apparel.images[0].url"
+                img-alt="Type Image for men"
                 text-variant="black"
                 img-height="300"
               >
                 <template #footer>
-                  <b-button class="stretched-link" href="#" variant="primary">
-                    {{ show }}</b-button
-                  >
+                  <router-link class="stretched-link" :to="rec_apparel.path">
+                    <b-button variant="primary"> {{ show }}</b-button>
+                  </router-link>
                 </template>
                 <b-card-body>
-                  <b-card-title>{{ type.product_name }}</b-card-title>
-                  <b-card-sub-title>{{ type.product_info }}</b-card-sub-title>
+                  <b-card-title>{{ rec_apparel.name }}</b-card-title>
+                  <b-card-sub-title>{{
+                    rec_apparel.category
+                  }}</b-card-sub-title>
                 </b-card-body>
               </b-card>
             </b-col>
@@ -106,9 +108,85 @@ export default {
     return {
       show: "商品を見る",
       recommned: "あなたへのオススメ",
-      types: null,
-      types_men: null,
-      types_women: null,
+      rec_mens: [
+        {
+          name: "NRGY スター スリッポン",
+          category: "スニーカー",
+          path: "/category_men/product/2",
+          images: [
+            {
+              id: 4,
+              url:
+                "https://storage.cloud.google.com/my-kutu-data/product/image2_1.png",
+            },
+          ],
+        },
+        {
+          name: "ウルトラブースト",
+          category: "スニーカー",
+          path: "/category_men/product/5",
+          images: [
+            {
+              id: 10,
+              url:
+                "https://storage.googleapis.com/my-kutu-data/product/image5_1.png",
+            },
+          ],
+        },
+        {
+          name: "スポーツマスク",
+          category: "マスク",
+          path: "/category_men/product/10",
+
+          images: [
+            {
+              id: 17,
+              url:
+                "https://storage.googleapis.com/my-kutu-data/product/image10_1.png",
+            },
+          ],
+        },
+      ],
+      rec_womens: [
+        {
+          name: "ニューバランス WL",
+          category: "スニーカー",
+          path: "/category_women/product/3",
+          images: [
+            {
+              url:
+                "https://storage.googleapis.com/my-kutu-data/product/image3_1.png",
+            },
+          ],
+        },
+        {
+          name: "ウルトラブースト",
+          category: "スニーカー",
+          path: "/category_women/product/5",
+          images: [
+            {
+              id: 10,
+              url:
+                "https://storage.googleapis.com/my-kutu-data/product/image5_1.png",
+            },
+          ],
+        },
+      ],
+      rec_apparels: [
+        {
+          name: "スポーツマスク",
+          category: "マスク",
+          path: "/apparel/product/10",
+
+          images: [
+            {
+              id: 17,
+              url:
+                "https://storage.googleapis.com/my-kutu-data/product/image10_1.png",
+            },
+          ],
+        },
+      ],
     };
   },
   props: {
@@ -116,19 +194,6 @@ export default {
   },
   mounted() {
     //本番環境
-    fetch("https://fashionablelife.info/api/kind_of_shoes/men")
-      .then((res) => {
-        console.log("sucess2");
-        return res.json();
-      })
-      .then((res) => {
-        //console.log(res);
-        this.types_men = res;
-      })
-      .catch((err) => {
-        console.log(err);
-        console.log("失敗しました3");
-      });
     fetch("https://fashionablelife.info/api/kind_of_shoes/women")
       .then((res) => {
         console.log("sucess3");
