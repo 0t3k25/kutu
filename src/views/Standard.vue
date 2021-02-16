@@ -1,16 +1,24 @@
 <template>
   <div id="standard">
-    <h1>{{ name }}</h1>
+    <Standard_item></Standard_item>
   </div>
 </template>
 
 <script>
+import Standard_item from "../components/Standard_item";
+
 export default {
-  name: "Standard",
-  data() {
-    return {
-      name: "KUTUの定番商品",
-    };
+  name: "Srandard",
+  components: {
+    Standard_item,
   },
 };
 </script>
+
+<style>
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+</style>
