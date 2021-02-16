@@ -1,12 +1,12 @@
 <template>
-  <div id="product_men" class="pt-4">
+  <div id="product_apparel" class="pt-4">
     <b-container>
       <b-breadcrumb>
         <b-breadcrumb-item>
           <router-link to="/">ホーム</router-link></b-breadcrumb-item
         >
         <b-breadcrumb-item>
-          <router-link to="/category_men">メンズ</router-link>
+          <router-link to="/category_apparel">アパレル</router-link>
         </b-breadcrumb-item>
         <b-breadcrumb-item active>
           {{ product.name }}
@@ -29,16 +29,17 @@
         </b-carousel-slide>
       </b-carousel>
     </div>
-    <!-- ここのレイアウトは後から考える
+    <!--ここのレイアウトは後から考える
     <b-container class="pb-5">
       <h5>size</h5>
       <b-row class="container text-center center">
-  
+         
         <b-card v-for="(size, index) in sizez" :key="index" class="mr-3">{{
           size
         }}</b-card>
       </b-row>
-    </b-container>-->
+    </b-container>
+    -->
     <div class="pt-4 pb-5 container">
       <b-button block variant="outline-primary">購入する</b-button>
     </div>
@@ -87,7 +88,7 @@
 
 <script>
 export default {
-  name: "product_men",
+  name: "product_apparel",
   data() {
     return {
       sizez: [23.5, 24.0, 24.5, 25.0, 25.5, 26.0, 26.5, 27.0, 27.5, 28.0, 28.5],
