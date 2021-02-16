@@ -27,9 +27,9 @@ export default {
     return {
       items: [
         { title: "定番", path: "/standard" },
-        { title: "メンズ", path: "/product_men" },
-        { title: "レディース", path: "/product_lady" },
-        { title: "アパレル", path: "/product_aparel" },
+        { title: "メンズ", path: "/category_men" },
+        { title: "レディース", path: "/category_women" },
+        { title: "アパレル", path: "/apparel" },
       ],
     };
   },

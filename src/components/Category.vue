@@ -18,10 +18,13 @@
           >
             <b-card-body>
               <b-card-title>
-                <a class="category_name stretched-link" href="#">
-                  {{ category.name }}</a
-                ></b-card-title
-              >
+                <router-link
+                  class="category_name stretched-link"
+                  :to="category.path"
+                >
+                  {{ category.name }}
+                </router-link>
+              </b-card-title>
             </b-card-body>
           </b-card>
         </b-col>
@@ -40,19 +43,22 @@ export default {
           img_url:
             "https://storage.googleapis.com/my-kutu-data/category/%E3%83%A1%E3%83%B3%E3%82%B9%E3%82%99%E3%82%B7%E3%83%A5%E3%83%BC%E3%82%B9%E3%82%99.jpg",
           id: 1,
-          name: "メンズシューズ",
+          name: "メンズ",
+          path: "/category_men",
         },
         {
           img_url:
             "https://storage.googleapis.com/my-kutu-data/category/%E3%83%AC%E3%83%86%E3%82%99%E3%82%A3%E3%83%BC%E3%82%B9%E3%82%B7%E3%83%A5%E3%83%BC%E3%82%B9%E3%82%99.jpg",
           id: 2,
-          name: "レディースシューズ",
+          name: "レディース",
+          path: "/category_women",
         },
         {
           img_url:
             "https://storage.googleapis.com/my-kutu-data/category/%E3%82%A2%E3%83%8F%E3%82%9A%E3%83%AC%E3%83%AB.jpeg",
           id: 3,
           name: "アパレル",
+          path: "/apparel",
         },
       ],
     };

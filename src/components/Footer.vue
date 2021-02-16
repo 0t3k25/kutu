@@ -32,14 +32,10 @@
             <b-col>
               <h5 class="text-white p">ショップ</h5>
               <ul class="list-unstyled">
-                <li>
-                  <a href="#" class="text-white">メンズシューズ</a>
-                </li>
-                <li>
-                  <a href="#" class="text-white">レディースシューズ</a>
-                </li>
-                <li>
-                  <a href="#" class="text-white">アパレル</a>
+                <li v-for="(item, index) in items" :key="index">
+                  <router-link class="text-white" v-bind:to="item.path"
+                    >{{ item.title }}
+                  </router-link>
                 </li>
               </ul>
             </b-col>
@@ -73,6 +69,16 @@
 <script>
 export default {
   name: "Footer",
+  data() {
+    return {
+      items: [
+        { title: "定番", path: "/standard" },
+        { title: "メンズ", path: "/category_men" },
+        { title: "レディース", path: "/category_women" },
+        { title: "アパレル", path: "/apparel" },
+      ],
+    };
+  },
   props: {
     msg: String,
   },
