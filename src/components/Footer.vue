@@ -59,7 +59,7 @@
       <!-- Copyright -->
       <div class="text-center p-3">
         © 2020 Copyright:
-        <a class="text-dark" href="#">MDBootstrap.com</a>
+        <a class="text-dark" href="#">KUTU</a>
       </div>
       <!-- Copyright -->
     </footer>
